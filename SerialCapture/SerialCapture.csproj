@@ -56,9 +56,16 @@
     </ApplicationDefinition>
     <Compile Include="Display\AdvancedDisplay.cs" />
     <Compile Include="Display\BasicDisplay.cs" />
-    <Compile Include="Display\Display.cs" />
+    <Compile Include="Display\MainDisplay.cs" />
+    <Compile Include="DesplayDesign\SerialPortControl.xaml.cs">
+      <DependentUpon>SerialPortControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display\StatesDisplay.cs" />
     <Compile Include="SerialFunction\SerialCapture.cs" />
+    <Page Include="DesplayDesign\SerialPortControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

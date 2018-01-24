@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SerialCapture
+namespace SerialCapture.Display
 {
     public class StatesDisplay
     {
