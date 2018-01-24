@@ -14,56 +14,7 @@
         </Grid.RowDefinitions>
         <TabControl Margin="0" Grid.Row="0">
             <TabItem Header="基本功能">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="300*"/>
-                        <RowDefinition Height="180"/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0" Margin="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="80*"/>
-                            <ColumnDefinition Width="20*"/>
-                        </Grid.ColumnDefinitions>
-                        <RichTextBox x:Name="txtBasicReceive" Grid.Column="0" Margin="3" VerticalScrollBarVisibility="Auto" AutoWordSelection="True"/>
-                    </Grid>
-                    <Grid Grid.Row="1" Margin="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="55*"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="250"/>
-                        </Grid.ColumnDefinitions>
-                        <RichTextBox x:Name="txtBasicSend" Grid.Column="0" Margin="3" AutoWordSelection="True" VerticalScrollBarVisibility="Auto"/>
-                        <GroupBox Header="发码区"  Margin="0" Grid.Column="1">
-                            <Grid Margin="0">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="5"/>
-                                    <RowDefinition Height="8*"/>
-                                    <RowDefinition Height="8*"/>
-                                    <RowDefinition Height="1"/>
-                                    <RowDefinition Height="10*"/>
-                                    <RowDefinition Height="10*"/>
-                                    <RowDefinition Height="10*"/>
-                                    <RowDefinition Height="10*"/>
-                                </Grid.RowDefinitions>
-                                <RadioButton Grid.Row="1" Margin="10,0,0,0" Content="HEX码"/>
-                                <RadioButton Grid.Row="2" Margin="10,0,0,0" Content="字符串"/>
-                                <Grid Grid.Row="4">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="50*"/>
-                                        <ColumnDefinition Width="50*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Button Margin="3" Grid.Column="0" Content="保存"/>
-                                    <Button Margin="3" Grid.Column="1" Content="载入"/>
-                                </Grid>
-                                <Button Margin="3" Grid.Row="5"  Content="+帧长校验"/>
-                                <Button Margin="3" Grid.Row="6"  Content="清除"/>
-                                <Button Margin="3" Grid.Row="7"  Content="发送"/>
-                            </Grid>
-                        </GroupBox>
-
-                    </Grid>
-
-                </Grid>
+                <display:BasicDisplayPage Margin="0"/>
             </TabItem>
             <TabItem Header="高级发码">
                 <Grid>

@@ -1,0 +1,37 @@
+﻿<ContentControl x:Class="SerialCapture.Display.BasicDisplayPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SerialCapture.Display"
+      mc:Ignorable="d" 
+    d:DesignHeight="400" d:DesignWidth="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="180"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="130"/>
+            </Grid.ColumnDefinitions>
+            <RichTextBox x:Name="txtBasicReceive" Grid.Column="0" Margin="3" VerticalScrollBarVisibility="Auto" AutoWordSelection="True"/>
+            <local:ReceiveCode Grid.Column="1"/>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="55*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <RichTextBox x:Name="txtBasicSend" Grid.Column="0" Margin="3" AutoWordSelection="True" VerticalScrollBarVisibility="Auto"/>
+            <local:SendCodeControl Grid.Column="1"/>
+            <local:SerialPortControl Grid.Column="2"/>
+
+
+        </Grid>
+
+    </Grid>
+</ContentControl>
+

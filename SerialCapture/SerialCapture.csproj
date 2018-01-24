@@ -55,14 +55,35 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Display\AdvancedDisplay.cs" />
-    <Compile Include="Display\BasicDisplay.cs" />
+    <Compile Include="Display\BasicDisplay\BasicDisplay.cs" />
+    <Compile Include="Display\BasicDisplay\BasicDisplayPage.xaml.cs">
+      <DependentUpon>BasicDisplayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Display\BasicDisplay\ReceiveCode.xaml.cs">
+      <DependentUpon>ReceiveCode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display\MainDisplay.cs" />
-    <Compile Include="DesplayDesign\SerialPortControl.xaml.cs">
+    <Compile Include="Display\BasicDisplay\SerialPortControl.xaml.cs">
       <DependentUpon>SerialPortControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Display\BasicDisplay\SendCodeControl.xaml.cs">
+      <DependentUpon>SendCodeControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Display\StatesDisplay.cs" />
     <Compile Include="SerialFunction\SerialCapture.cs" />
-    <Page Include="DesplayDesign\SerialPortControl.xaml">
+    <Page Include="Display\BasicDisplay\BasicDisplayPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Display\BasicDisplay\SerialPortControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Display\BasicDisplay\SendCodeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Display\BasicDisplay\ReceiveCode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,6 +127,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Display\AdvancedDisplay\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
